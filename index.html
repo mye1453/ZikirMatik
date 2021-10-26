@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<title>ZikirMatik</title>
+
+	<link rel="shortcut icon" href="zikirmatik.png" type="image/x-icon" >
+<html>
+    <head>
+			
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> <!-- Bootstrap, to give the button a cool look (: -->
+        <div class="container">
+					<body>
+					<div style="background-image: url('https://img.piri.net/resim/upload/2021/03/10/05/21/069b2b9dkuran.jpg');">
+    </head>
+    <body>
+			
+        <br><br>
+        <center><h1 style="font-style:bold;color:#10AE78;font-size:90px;font-family: impact;">    Haydi, Sen de Zikir Çek!</h1><br><center>
+					<!-- salavat (: -->
+        <button class="btn btn-lg btn-success" onclick="addSalavat()"style="font-style:italic;color:black;font-family: impact;">Allahümme Salli Alâ Seyyidina Muhammed</button><br>
+        <p style="color:#201201;font-family: verdana;font-size:15px;">Toplam Salavat:<span id="topsalavat">0</span></p>
+<!-- tekbir (: -->
+				<button class="btn btn-lg btn-success" onclick="addTekbir()"style="font-style:italic;color:black;font-family: impact">Allahuekber</button><br>
+        <p style="color:#201201;font-family: verdana;font-size:15px;">Toplam Tekbir:<span id="toptekbir">0</span></p>
+<!-- kelimei şehadet (: -->
+				 <button class="btn btn-lg btn-success" onclick="addKsehadet()"style="font-style:italic;color:black;font-family: impact">La İlahe İllallah Muhamedur Resulullah</button><br>
+        <p style="color:#201201;font-family: verdana;font-size:15px;">Toplam Kelime-i Şehadet:<span id="topksehadet">0</span></p>
+
+				<h1 style="font-family: impact;font-size:100px;">                                                                                  </h1><br>
+				<h1 style="font-family: impact;font-size:100px;">                                                                                  </h1><br>
+				<h1 style="font-family: impact;font-size:100px;">                                                                                                                                                                  </h1><br>
+				<h1 style="font-family: impact;font-size:100px;">                                                                                  </h1><br>
+				<h1 style="font-family: impact;font-size:120px;">                                                                                  </h1><br>
+				<h1 style="font-family: impact;font-size:100px;">                                                                                  </h1><br>
+				<h1 style="font-family: impact;font-size:100px;">                            </h1><br>
+				<h1 style="color:black;font-style:bold;font-family: impact;font-size:17px;">‏‏‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎  ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎  ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎  ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎  ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎  ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎M. Yusuf Eser Tarafından</h1><br>
+			
+			
+			
+			
+				
+    </body>
+    <script>
+        var topsalavat = 0;
+        function addSalavat(){
+            topsalavat++;
+            document.getElementById("topsalavat").innerHTML = topsalavat;
+        }
+
+			
+        var toptekbir = 0;
+        function addTekbir(){
+            toptekbir++;
+            document.getElementById("toptekbir").innerHTML = toptekbir;
+        }
+
+				var topksehadet = 0;
+        function addKsehadet(){
+            topksehadet++;
+            document.getElementById("topksehadet").innerHTML = topksehadet;
+        }
+				
+				
+    </script>
+</html>
